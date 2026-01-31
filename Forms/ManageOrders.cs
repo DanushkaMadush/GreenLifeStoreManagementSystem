@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GreenLifeStoreManagementSystem.Forms
 {
-    public partial class LoginForm : Form
+    public partial class ManageOrders : Form
     {
-        public LoginForm()
+        public ManageOrders()
         {
             InitializeComponent();
         }
