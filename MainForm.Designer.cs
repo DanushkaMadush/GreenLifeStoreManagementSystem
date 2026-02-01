@@ -40,11 +40,8 @@
             this.btnReviews = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
-            this.panelHeader = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
             this.sidePanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelHeader.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +49,7 @@
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.DimGray;
             this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -64,14 +62,13 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.UseWaitCursor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.DimGray;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -85,13 +82,13 @@
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.UseWaitCursor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnReports
             // 
             this.btnReports.BackColor = System.Drawing.Color.DimGray;
             this.btnReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReports.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnReports.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReports.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,13 +101,13 @@
             this.btnReports.Text = "Reports";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.UseVisualStyleBackColor = false;
-            this.btnReports.UseWaitCursor = true;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnBrowseProducts
             // 
             this.btnBrowseProducts.BackColor = System.Drawing.Color.DimGray;
             this.btnBrowseProducts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBrowseProducts.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnBrowseProducts.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnBrowseProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrowseProducts.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,13 +120,13 @@
             this.btnBrowseProducts.Text = "Browse Products";
             this.btnBrowseProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBrowseProducts.UseVisualStyleBackColor = false;
-            this.btnBrowseProducts.UseWaitCursor = true;
             this.btnBrowseProducts.Click += new System.EventHandler(this.btnBrowseProducts_Click);
             // 
             // btnManageOrders
             // 
             this.btnManageOrders.BackColor = System.Drawing.Color.DimGray;
             this.btnManageOrders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnManageOrders.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnManageOrders.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnManageOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageOrders.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,13 +139,13 @@
             this.btnManageOrders.Text = "Manage Orders";
             this.btnManageOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageOrders.UseVisualStyleBackColor = false;
-            this.btnManageOrders.UseWaitCursor = true;
             this.btnManageOrders.Click += new System.EventHandler(this.btnManageOrders_Click);
             // 
             // btnCart
             // 
             this.btnCart.BackColor = System.Drawing.Color.DimGray;
             this.btnCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCart.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnCart.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCart.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,13 +158,13 @@
             this.btnCart.Text = "Cart";
             this.btnCart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCart.UseVisualStyleBackColor = false;
-            this.btnCart.UseWaitCursor = true;
             this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // btnManageCustomers
             // 
             this.btnManageCustomers.BackColor = System.Drawing.Color.DimGray;
             this.btnManageCustomers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnManageCustomers.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnManageCustomers.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnManageCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageCustomers.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,13 +177,13 @@
             this.btnManageCustomers.Text = "Manage Customers";
             this.btnManageCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageCustomers.UseVisualStyleBackColor = false;
-            this.btnManageCustomers.UseWaitCursor = true;
             this.btnManageCustomers.Click += new System.EventHandler(this.btnManageCustomers_Click);
             // 
             // btnMyOrders
             // 
             this.btnMyOrders.BackColor = System.Drawing.Color.DimGray;
             this.btnMyOrders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMyOrders.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnMyOrders.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnMyOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyOrders.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,13 +196,13 @@
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMyOrders.UseVisualStyleBackColor = false;
-            this.btnMyOrders.UseWaitCursor = true;
             this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
             // 
             // btnManageProducts
             // 
             this.btnManageProducts.BackColor = System.Drawing.Color.DimGray;
             this.btnManageProducts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnManageProducts.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnManageProducts.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnManageProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageProducts.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,13 +215,13 @@
             this.btnManageProducts.Text = "Manage Products";
             this.btnManageProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageProducts.UseVisualStyleBackColor = false;
-            this.btnManageProducts.UseWaitCursor = true;
             this.btnManageProducts.Click += new System.EventHandler(this.btnManageProducts_Click);
             // 
             // btnReviews
             // 
             this.btnReviews.BackColor = System.Drawing.Color.DimGray;
             this.btnReviews.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReviews.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnReviews.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnReviews.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReviews.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,13 +234,13 @@
             this.btnReviews.Text = "Review and Ratings";
             this.btnReviews.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReviews.UseVisualStyleBackColor = false;
-            this.btnReviews.UseWaitCursor = true;
             this.btnReviews.Click += new System.EventHandler(this.btnReviews_Click);
             // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.DimGray;
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,59 +253,13 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
-            // btnHome
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnHome.UseWaitCursor = false;
-
-            // btnProfile
-            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnProfile.UseWaitCursor = false;
-
-            // btnReviews
-            this.btnReviews.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnReviews.UseWaitCursor = false;
-
-            // btnManageProducts
-            this.btnManageProducts.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnManageProducts.UseWaitCursor = false;
-
-            // btnMyOrders
-            this.btnMyOrders.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnMyOrders.UseWaitCursor = false;
-
-            // btnManageCustomers
-            this.btnManageCustomers.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnManageCustomers.UseWaitCursor = false;
-
-            // btnCart
-            this.btnCart.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnCart.UseWaitCursor = false;
-
-            // btnManageOrders
-            this.btnManageOrders.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnManageOrders.UseWaitCursor = false;
-
-            // btnBrowseProducts
-            this.btnBrowseProducts.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnBrowseProducts.UseWaitCursor = false;
-
-            // btnReports
-            this.btnReports.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnReports.UseWaitCursor = false;
-
-            // btnDashboard
-            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnDashboard.UseWaitCursor = false;
-
-            // btnLogout
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnLogout.UseWaitCursor = false;
             this.btnLogout.UseWaitCursor = true;
             // 
             // btnProfile
             // 
             this.btnProfile.BackColor = System.Drawing.Color.DimGray;
             this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnProfile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnProfile.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -325,38 +276,11 @@
             this.btnProfile.UseWaitCursor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // panelHeader
-            // 
-            this.panelHeader.BackColor = System.Drawing.Color.Gray;
-            this.panelHeader.Controls.Add(this.btnClose);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1002, 50);
-            this.panelHeader.TabIndex = 0;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Gray;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(948, 6);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(42, 41);
-            this.btnClose.TabIndex = 12;
-            this.btnClose.Text = "x";
-            this.btnClose.UseVisualStyleBackColor = false;
-            // 
             // panelMain
             // 
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 50);
+            this.panelMain.Location = new System.Drawing.Point(209, 3);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1002, 547);
+            this.panelMain.Size = new System.Drawing.Size(791, 594);
             this.panelMain.TabIndex = 0;
             // 
             // sidePanel
@@ -377,9 +301,9 @@
             this.sidePanel.Controls.Add(this.btnLogout);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.sidePanel.Location = new System.Drawing.Point(0, 50);
+            this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(206, 547);
+            this.sidePanel.Size = new System.Drawing.Size(206, 597);
             this.sidePanel.TabIndex = 1;
             this.sidePanel.WrapContents = false;
             // 
@@ -391,18 +315,15 @@
             this.ClientSize = new System.Drawing.Size(1002, 597);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panelHeader);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
-            this.Text = "Form1";
-            this.panelHeader.ResumeLayout(false);
+            this.Text = "Green Life";
             this.sidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnProfile;
@@ -416,7 +337,6 @@
         private System.Windows.Forms.Button btnManageOrders;
         private System.Windows.Forms.Button btnManageCustomers;
         private System.Windows.Forms.Button btnManageProducts;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.FlowLayoutPanel sidePanel;
     }
 }
