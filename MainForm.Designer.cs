@@ -43,10 +43,9 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.sidePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panelHeader.SuspendLayout();
-            this.panelMain.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.sidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDashboard
@@ -66,11 +65,13 @@
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.UseWaitCursor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.DimGray;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -85,6 +86,7 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.UseWaitCursor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnReports
             // 
@@ -103,6 +105,7 @@
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.UseVisualStyleBackColor = false;
             this.btnReports.UseWaitCursor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnBrowseProducts
             // 
@@ -121,6 +124,7 @@
             this.btnBrowseProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBrowseProducts.UseVisualStyleBackColor = false;
             this.btnBrowseProducts.UseWaitCursor = true;
+            this.btnBrowseProducts.Click += new System.EventHandler(this.btnBrowseProducts_Click);
             // 
             // btnManageOrders
             // 
@@ -139,6 +143,7 @@
             this.btnManageOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageOrders.UseVisualStyleBackColor = false;
             this.btnManageOrders.UseWaitCursor = true;
+            this.btnManageOrders.Click += new System.EventHandler(this.btnManageOrders_Click);
             // 
             // btnCart
             // 
@@ -157,6 +162,7 @@
             this.btnCart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCart.UseVisualStyleBackColor = false;
             this.btnCart.UseWaitCursor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // btnManageCustomers
             // 
@@ -175,6 +181,7 @@
             this.btnManageCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageCustomers.UseVisualStyleBackColor = false;
             this.btnManageCustomers.UseWaitCursor = true;
+            this.btnManageCustomers.Click += new System.EventHandler(this.btnManageCustomers_Click);
             // 
             // btnMyOrders
             // 
@@ -193,6 +200,7 @@
             this.btnMyOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMyOrders.UseVisualStyleBackColor = false;
             this.btnMyOrders.UseWaitCursor = true;
+            this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
             // 
             // btnManageProducts
             // 
@@ -211,6 +219,7 @@
             this.btnManageProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageProducts.UseVisualStyleBackColor = false;
             this.btnManageProducts.UseWaitCursor = true;
+            this.btnManageProducts.Click += new System.EventHandler(this.btnManageProducts_Click);
             // 
             // btnReviews
             // 
@@ -229,6 +238,7 @@
             this.btnReviews.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReviews.UseVisualStyleBackColor = false;
             this.btnReviews.UseWaitCursor = true;
+            this.btnReviews.Click += new System.EventHandler(this.btnReviews_Click);
             // 
             // btnLogout
             // 
@@ -246,6 +256,53 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
+            // btnHome
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnHome.UseWaitCursor = false;
+
+            // btnProfile
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnProfile.UseWaitCursor = false;
+
+            // btnReviews
+            this.btnReviews.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnReviews.UseWaitCursor = false;
+
+            // btnManageProducts
+            this.btnManageProducts.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnManageProducts.UseWaitCursor = false;
+
+            // btnMyOrders
+            this.btnMyOrders.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnMyOrders.UseWaitCursor = false;
+
+            // btnManageCustomers
+            this.btnManageCustomers.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnManageCustomers.UseWaitCursor = false;
+
+            // btnCart
+            this.btnCart.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCart.UseWaitCursor = false;
+
+            // btnManageOrders
+            this.btnManageOrders.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnManageOrders.UseWaitCursor = false;
+
+            // btnBrowseProducts
+            this.btnBrowseProducts.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnBrowseProducts.UseWaitCursor = false;
+
+            // btnReports
+            this.btnReports.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnReports.UseWaitCursor = false;
+
+            // btnDashboard
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnDashboard.UseWaitCursor = false;
+
+            // btnLogout
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnLogout.UseWaitCursor = false;
             this.btnLogout.UseWaitCursor = true;
             // 
             // btnProfile
@@ -266,6 +323,7 @@
             this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.UseVisualStyleBackColor = false;
             this.btnProfile.UseWaitCursor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // panelHeader
             // 
@@ -295,36 +353,35 @@
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.flowLayoutPanel1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 50);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1002, 547);
             this.panelMain.TabIndex = 0;
             // 
-            // flowLayoutPanel1
+            // sidePanel
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DimGray;
-            this.flowLayoutPanel1.Controls.Add(this.btnHome);
-            this.flowLayoutPanel1.Controls.Add(this.btnProfile);
-            this.flowLayoutPanel1.Controls.Add(this.btnReviews);
-            this.flowLayoutPanel1.Controls.Add(this.btnManageProducts);
-            this.flowLayoutPanel1.Controls.Add(this.btnMyOrders);
-            this.flowLayoutPanel1.Controls.Add(this.btnManageCustomers);
-            this.flowLayoutPanel1.Controls.Add(this.btnCart);
-            this.flowLayoutPanel1.Controls.Add(this.btnManageOrders);
-            this.flowLayoutPanel1.Controls.Add(this.btnBrowseProducts);
-            this.flowLayoutPanel1.Controls.Add(this.btnReports);
-            this.flowLayoutPanel1.Controls.Add(this.btnDashboard);
-            this.flowLayoutPanel1.Controls.Add(this.btnLogout);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(206, 547);
-            this.flowLayoutPanel1.TabIndex = 1;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.sidePanel.AutoScroll = true;
+            this.sidePanel.BackColor = System.Drawing.Color.DimGray;
+            this.sidePanel.Controls.Add(this.btnHome);
+            this.sidePanel.Controls.Add(this.btnProfile);
+            this.sidePanel.Controls.Add(this.btnReviews);
+            this.sidePanel.Controls.Add(this.btnManageProducts);
+            this.sidePanel.Controls.Add(this.btnMyOrders);
+            this.sidePanel.Controls.Add(this.btnManageCustomers);
+            this.sidePanel.Controls.Add(this.btnCart);
+            this.sidePanel.Controls.Add(this.btnManageOrders);
+            this.sidePanel.Controls.Add(this.btnBrowseProducts);
+            this.sidePanel.Controls.Add(this.btnReports);
+            this.sidePanel.Controls.Add(this.btnDashboard);
+            this.sidePanel.Controls.Add(this.btnLogout);
+            this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.sidePanel.Location = new System.Drawing.Point(0, 50);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(206, 547);
+            this.sidePanel.TabIndex = 1;
+            this.sidePanel.WrapContents = false;
             // 
             // MainForm
             // 
@@ -332,14 +389,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1002, 597);
+            this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "Form1";
             this.panelHeader.ResumeLayout(false);
-            this.panelMain.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.sidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -360,7 +417,7 @@
         private System.Windows.Forms.Button btnManageCustomers;
         private System.Windows.Forms.Button btnManageProducts;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel sidePanel;
     }
 }
 
