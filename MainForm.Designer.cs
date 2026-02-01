@@ -280,7 +280,7 @@
             // 
             this.panelMain.Location = new System.Drawing.Point(209, 3);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(791, 594);
+            this.panelMain.Size = new System.Drawing.Size(1002, 597);
             this.panelMain.TabIndex = 0;
             // 
             // sidePanel
@@ -303,7 +303,7 @@
             this.sidePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(206, 597);
+            this.sidePanel.Size = new System.Drawing.Size(206, 600);
             this.sidePanel.TabIndex = 1;
             this.sidePanel.WrapContents = false;
             // 
@@ -312,7 +312,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1002, 597);
+            this.ClientSize = new System.Drawing.Size(1215, 600);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
