@@ -46,6 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageCustomers.Designer.cs">
+      <DependentUpon>ManageCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageOrders.Designer.cs">
+      <DependentUpon>ManageOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageProducts.Designer.cs">
+      <DependentUpon>ManageProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MyOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MyOrders.Designer.cs">
+      <DependentUpon>MyOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReviewAndRatings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReviewAndRatings.Designer.cs">
+      <DependentUpon>ReviewAndRatings.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +120,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageCustomers.resx">
+      <DependentUpon>ManageCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageOrders.resx">
+      <DependentUpon>ManageOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageProducts.resx">
+      <DependentUpon>ManageProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MyOrders.resx">
+      <DependentUpon>MyOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReviewAndRatings.resx">
+      <DependentUpon>ReviewAndRatings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
