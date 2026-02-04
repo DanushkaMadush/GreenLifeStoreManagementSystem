@@ -16,6 +16,7 @@ namespace GreenLifeStoreManagementSystem
         public MainForm()
         {
             InitializeComponent();
+            LoadForm(new Home());
         }
         private void LoadForm(Form form)
         {
@@ -84,7 +85,14 @@ namespace GreenLifeStoreManagementSystem
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            LoadForm(new Home()); // Redirect to login form
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+            this.Close();
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoadForm(new Home());
         }
     }
 }

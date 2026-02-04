@@ -4,7 +4,7 @@
     {
         private System.ComponentModel.IContainer components = null;
 
-        private System.Windows.Forms.Panel panelMainContainer;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMain;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelSubtitle;
         private System.Windows.Forms.Panel panelWelcome;
@@ -30,7 +30,7 @@
 
         private void InitializeComponent()
         {
-            this.panelMainContainer = new System.Windows.Forms.Panel();
+            this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelSubtitle = new System.Windows.Forms.Label();
             this.panelWelcome = new System.Windows.Forms.Panel();
@@ -42,30 +42,39 @@
             this.labelBullet2 = new System.Windows.Forms.Label();
             this.labelBullet3 = new System.Windows.Forms.Label();
             this.labelBullet4 = new System.Windows.Forms.Label();
-            this.panelMainContainer.SuspendLayout();
+            this.tableLayoutPanelMain.SuspendLayout();
             this.panelWelcome.SuspendLayout();
             this.panelContent.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelMainContainer
+            // tableLayoutPanelMain
             // 
-            this.panelMainContainer.BackColor = System.Drawing.Color.White;
-            this.panelMainContainer.Controls.Add(this.labelTitle);
-            this.panelMainContainer.Controls.Add(this.labelSubtitle);
-            this.panelMainContainer.Controls.Add(this.panelWelcome);
-            this.panelMainContainer.Controls.Add(this.panelContent);
-            this.panelMainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMainContainer.Location = new System.Drawing.Point(0, 0);
-            this.panelMainContainer.Name = "panelMainContainer";
-            this.panelMainContainer.Size = new System.Drawing.Size(800, 450);
-            this.panelMainContainer.TabIndex = 0;
+            this.tableLayoutPanelMain.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanelMain.ColumnCount = 1;
+            this.tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelMain.Controls.Add(this.labelTitle, 0, 0);
+            this.tableLayoutPanelMain.Controls.Add(this.labelSubtitle, 0, 1);
+            this.tableLayoutPanelMain.Controls.Add(this.panelWelcome, 0, 2);
+            this.tableLayoutPanelMain.Controls.Add(this.panelContent, 0, 3);
+            this.tableLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelMain.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanelMain.Name = "tableLayoutPanelMain";
+            this.tableLayoutPanelMain.RowCount = 5;
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelMain.Size = new System.Drawing.Size(900, 600);
+            this.tableLayoutPanelMain.TabIndex = 0;
             // 
             // labelTitle
             // 
+            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
-            this.labelTitle.Location = new System.Drawing.Point(206, 30);
+            this.labelTitle.Location = new System.Drawing.Point(242, 6);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(415, 47);
             this.labelTitle.TabIndex = 0;
@@ -73,10 +82,11 @@
             // 
             // labelSubtitle
             // 
+            this.labelSubtitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelSubtitle.AutoSize = true;
             this.labelSubtitle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSubtitle.ForeColor = System.Drawing.Color.Gray;
-            this.labelSubtitle.Location = new System.Drawing.Point(193, 77);
+            this.labelSubtitle.Location = new System.Drawing.Point(236, 65);
             this.labelSubtitle.Name = "labelSubtitle";
             this.labelSubtitle.Size = new System.Drawing.Size(428, 25);
             this.labelSubtitle.TabIndex = 1;
@@ -84,11 +94,11 @@
             // 
             // panelWelcome
             // 
-            this.panelWelcome.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelWelcome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelWelcome.BackColor = System.Drawing.Color.Transparent;
             this.panelWelcome.Controls.Add(this.labelWelcome);
             this.panelWelcome.Controls.Add(this.labelRole);
-            this.panelWelcome.Location = new System.Drawing.Point(43, 126);
+            this.panelWelcome.Location = new System.Drawing.Point(246, 100);
             this.panelWelcome.Name = "panelWelcome";
             this.panelWelcome.Size = new System.Drawing.Size(407, 72);
             this.panelWelcome.TabIndex = 2;
@@ -124,7 +134,7 @@
             this.panelContent.Controls.Add(this.labelBullet2);
             this.panelContent.Controls.Add(this.labelBullet3);
             this.panelContent.Controls.Add(this.labelBullet4);
-            this.panelContent.Location = new System.Drawing.Point(43, 188);
+            this.panelContent.Location = new System.Drawing.Point(200, 180);
             this.panelContent.Name = "panelContent";
             this.panelContent.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
             this.panelContent.Size = new System.Drawing.Size(500, 220);
@@ -140,8 +150,7 @@
             this.labelParagraph.Name = "labelParagraph";
             this.labelParagraph.Size = new System.Drawing.Size(444, 60);
             this.labelParagraph.TabIndex = 0;
-            this.labelParagraph.Text = "Welcome to GreenLife Organic Store Management System. This platform helps you man" +
-    "age and explore a wide range of organic, eco-friendly products with ease.";
+            this.labelParagraph.Text = "Welcome to GreenLife Organic Store Management System. This platform helps you manage and explore a wide range of organic, eco-friendly products with ease.";
             // 
             // labelBullet1
             // 
@@ -192,13 +201,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelMainContainer);
+            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.Controls.Add(this.tableLayoutPanelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.Text = "Home";
-            this.panelMainContainer.ResumeLayout(false);
-            this.panelMainContainer.PerformLayout();
+            this.tableLayoutPanelMain.ResumeLayout(false);
+            this.tableLayoutPanelMain.PerformLayout();
             this.panelWelcome.ResumeLayout(false);
             this.panelWelcome.PerformLayout();
             this.panelContent.ResumeLayout(false);

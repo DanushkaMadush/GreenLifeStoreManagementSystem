@@ -240,7 +240,7 @@
             // 
             this.btnLogout.BackColor = System.Drawing.Color.DimGray;
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -253,13 +253,12 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.UseWaitCursor = true;
             // 
             // btnProfile
             // 
             this.btnProfile.BackColor = System.Drawing.Color.DimGray;
             this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnProfile.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnProfile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnProfile.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -273,7 +272,6 @@
             this.btnProfile.Text = "Profile";
             this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.UseWaitCursor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // panelMain
@@ -317,6 +315,7 @@
             this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Green Life";
             this.sidePanel.ResumeLayout(false);
             this.ResumeLayout(false);

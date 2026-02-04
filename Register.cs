@@ -16,5 +16,25 @@ namespace GreenLifeStoreManagementSystem
         {
             InitializeComponent();
         }
+
+        private void buttonBackToLogin_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxFullName.Text = string.Empty;
+            textBoxUsername.Text = string.Empty;
+            textBoxEmail.Text = string.Empty;
+            textBoxPhone.Text = string.Empty;
+            textBoxAddress.Text = string.Empty;
+            textBoxPassword.Text = string.Empty;
+            textBoxConfirmPassword.Text = string.Empty;
+            labelValidation.Text = string.Empty;
+            textBoxFullName.Focus();
+        }
     }
 }

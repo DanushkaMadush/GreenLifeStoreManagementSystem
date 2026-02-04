@@ -58,18 +58,13 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonBackToLogin = new System.Windows.Forms.Button();
             this.labelValidation = new System.Windows.Forms.Label();
-
             this.panelRegister.SuspendLayout();
             this.SuspendLayout();
-
             // 
             // panelRegister
             // 
-            this.panelRegister.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelRegister.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.panelRegister.Size = new System.Drawing.Size(420, 540);
-            this.panelRegister.Location = new System.Drawing.Point((1215 - 420) / 2, (600 - 540) / 2); // Centered
             this.panelRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelRegister.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelRegister.Controls.Add(this.labelTitle);
             this.panelRegister.Controls.Add(this.labelFullName);
             this.panelRegister.Controls.Add(this.textBoxFullName);
@@ -89,20 +84,22 @@
             this.panelRegister.Controls.Add(this.buttonClear);
             this.panelRegister.Controls.Add(this.buttonBackToLogin);
             this.panelRegister.Controls.Add(this.labelValidation);
-
+            this.panelRegister.Location = new System.Drawing.Point(410, 12);
+            this.panelRegister.Name = "panelRegister";
+            this.panelRegister.Size = new System.Drawing.Size(420, 540);
+            this.panelRegister.TabIndex = 0;
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(34, 139, 34);
+            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
             this.labelTitle.Location = new System.Drawing.Point(60, 20);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(300, 32);
+            this.labelTitle.Size = new System.Drawing.Size(247, 32);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Create New Account";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             // 
             // labelFullName
             // 
@@ -110,10 +107,9 @@
             this.labelFullName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelFullName.Location = new System.Drawing.Point(40, 70);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(72, 19);
+            this.labelFullName.Size = new System.Drawing.Size(73, 19);
             this.labelFullName.TabIndex = 1;
             this.labelFullName.Text = "Full Name:";
-
             // 
             // textBoxFullName
             // 
@@ -122,7 +118,6 @@
             this.textBoxFullName.Name = "textBoxFullName";
             this.textBoxFullName.Size = new System.Drawing.Size(210, 25);
             this.textBoxFullName.TabIndex = 2;
-
             // 
             // labelUsername
             // 
@@ -130,10 +125,9 @@
             this.labelUsername.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelUsername.Location = new System.Drawing.Point(40, 110);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(71, 19);
+            this.labelUsername.Size = new System.Drawing.Size(74, 19);
             this.labelUsername.TabIndex = 3;
             this.labelUsername.Text = "Username:";
-
             // 
             // textBoxUsername
             // 
@@ -142,7 +136,6 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(210, 25);
             this.textBoxUsername.TabIndex = 4;
-
             // 
             // labelEmail
             // 
@@ -150,10 +143,9 @@
             this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelEmail.Location = new System.Drawing.Point(40, 150);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(45, 19);
+            this.labelEmail.Size = new System.Drawing.Size(44, 19);
             this.labelEmail.TabIndex = 5;
             this.labelEmail.Text = "Email:";
-
             // 
             // textBoxEmail
             // 
@@ -162,7 +154,6 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(210, 25);
             this.textBoxEmail.TabIndex = 6;
-
             // 
             // labelPhone
             // 
@@ -170,10 +161,9 @@
             this.labelPhone.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelPhone.Location = new System.Drawing.Point(40, 190);
             this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(98, 19);
+            this.labelPhone.Size = new System.Drawing.Size(105, 19);
             this.labelPhone.TabIndex = 7;
             this.labelPhone.Text = "Phone Number:";
-
             // 
             // textBoxPhone
             // 
@@ -182,7 +172,6 @@
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(210, 25);
             this.textBoxPhone.TabIndex = 8;
-
             // 
             // labelAddress
             // 
@@ -190,10 +179,9 @@
             this.labelAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelAddress.Location = new System.Drawing.Point(40, 230);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(59, 19);
+            this.labelAddress.Size = new System.Drawing.Size(61, 19);
             this.labelAddress.TabIndex = 9;
             this.labelAddress.Text = "Address:";
-
             // 
             // textBoxAddress
             // 
@@ -202,7 +190,6 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(210, 25);
             this.textBoxAddress.TabIndex = 10;
-
             // 
             // labelPassword
             // 
@@ -210,10 +197,9 @@
             this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelPassword.Location = new System.Drawing.Point(40, 270);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(67, 19);
+            this.labelPassword.Size = new System.Drawing.Size(70, 19);
             this.labelPassword.TabIndex = 11;
             this.labelPassword.Text = "Password:";
-
             // 
             // textBoxPassword
             // 
@@ -223,7 +209,6 @@
             this.textBoxPassword.Size = new System.Drawing.Size(210, 25);
             this.textBoxPassword.TabIndex = 12;
             this.textBoxPassword.UseSystemPasswordChar = true;
-
             // 
             // labelConfirmPassword
             // 
@@ -231,10 +216,9 @@
             this.labelConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelConfirmPassword.Location = new System.Drawing.Point(40, 310);
             this.labelConfirmPassword.Name = "labelConfirmPassword";
-            this.labelConfirmPassword.Size = new System.Drawing.Size(120, 19);
+            this.labelConfirmPassword.Size = new System.Drawing.Size(123, 19);
             this.labelConfirmPassword.TabIndex = 13;
             this.labelConfirmPassword.Text = "Confirm Password:";
-
             // 
             // textBoxConfirmPassword
             // 
@@ -244,13 +228,12 @@
             this.textBoxConfirmPassword.Size = new System.Drawing.Size(210, 25);
             this.textBoxConfirmPassword.TabIndex = 14;
             this.textBoxConfirmPassword.UseSystemPasswordChar = true;
-
             // 
             // buttonRegister
             // 
+            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(34, 139, 34);
             this.buttonRegister.ForeColor = System.Drawing.Color.White;
             this.buttonRegister.Location = new System.Drawing.Point(40, 360);
             this.buttonRegister.Name = "buttonRegister";
@@ -258,13 +241,12 @@
             this.buttonRegister.TabIndex = 15;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.UseVisualStyleBackColor = false;
-
             // 
             // buttonClear
             // 
+            this.buttonClear.BackColor = System.Drawing.Color.LightGray;
             this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClear.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonClear.BackColor = System.Drawing.Color.LightGray;
             this.buttonClear.ForeColor = System.Drawing.Color.Black;
             this.buttonClear.Location = new System.Drawing.Point(40, 405);
             this.buttonClear.Name = "buttonClear";
@@ -272,13 +254,13 @@
             this.buttonClear.TabIndex = 16;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
-
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonBackToLogin
             // 
+            this.buttonBackToLogin.BackColor = System.Drawing.Color.LightGray;
             this.buttonBackToLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBackToLogin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonBackToLogin.BackColor = System.Drawing.Color.LightGray;
             this.buttonBackToLogin.ForeColor = System.Drawing.Color.Black;
             this.buttonBackToLogin.Location = new System.Drawing.Point(215, 405);
             this.buttonBackToLogin.Name = "buttonBackToLogin";
@@ -286,7 +268,7 @@
             this.buttonBackToLogin.TabIndex = 17;
             this.buttonBackToLogin.Text = "Back to Login";
             this.buttonBackToLogin.UseVisualStyleBackColor = false;
-
+            this.buttonBackToLogin.Click += new System.EventHandler(this.buttonBackToLogin_Click);
             // 
             // labelValidation
             // 
@@ -297,7 +279,6 @@
             this.labelValidation.Name = "labelValidation";
             this.labelValidation.Size = new System.Drawing.Size(0, 15);
             this.labelValidation.TabIndex = 18;
-
             // 
             // Register
             // 
@@ -306,12 +287,14 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1215, 600);
             this.Controls.Add(this.panelRegister);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.panelRegister.ResumeLayout(false);
             this.panelRegister.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion
