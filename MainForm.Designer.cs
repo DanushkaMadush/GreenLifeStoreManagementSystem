@@ -113,7 +113,7 @@
             this.btnBrowseProducts.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrowseProducts.ForeColor = System.Drawing.Color.White;
             this.btnBrowseProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBrowseProducts.Location = new System.Drawing.Point(3, 297);
+            this.btnBrowseProducts.Location = new System.Drawing.Point(3, 129);
             this.btnBrowseProducts.Name = "btnBrowseProducts";
             this.btnBrowseProducts.Size = new System.Drawing.Size(200, 36);
             this.btnBrowseProducts.TabIndex = 1;
@@ -170,7 +170,7 @@
             this.btnManageCustomers.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageCustomers.ForeColor = System.Drawing.Color.White;
             this.btnManageCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageCustomers.Location = new System.Drawing.Point(3, 171);
+            this.btnManageCustomers.Location = new System.Drawing.Point(3, 87);
             this.btnManageCustomers.Name = "btnManageCustomers";
             this.btnManageCustomers.Size = new System.Drawing.Size(200, 36);
             this.btnManageCustomers.TabIndex = 8;
@@ -189,7 +189,7 @@
             this.btnMyOrders.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyOrders.ForeColor = System.Drawing.Color.White;
             this.btnMyOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyOrders.Location = new System.Drawing.Point(3, 129);
+            this.btnMyOrders.Location = new System.Drawing.Point(3, 171);
             this.btnMyOrders.Name = "btnMyOrders";
             this.btnMyOrders.Size = new System.Drawing.Size(200, 36);
             this.btnMyOrders.TabIndex = 3;
@@ -208,7 +208,7 @@
             this.btnManageProducts.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageProducts.ForeColor = System.Drawing.Color.White;
             this.btnManageProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageProducts.Location = new System.Drawing.Point(3, 87);
+            this.btnManageProducts.Location = new System.Drawing.Point(3, 45);
             this.btnManageProducts.Name = "btnManageProducts";
             this.btnManageProducts.Size = new System.Drawing.Size(200, 36);
             this.btnManageProducts.TabIndex = 7;
@@ -227,7 +227,7 @@
             this.btnReviews.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReviews.ForeColor = System.Drawing.Color.White;
             this.btnReviews.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReviews.Location = new System.Drawing.Point(3, 45);
+            this.btnReviews.Location = new System.Drawing.Point(3, 297);
             this.btnReviews.Name = "btnReviews";
             this.btnReviews.Size = new System.Drawing.Size(200, 36);
             this.btnReviews.TabIndex = 4;
@@ -286,13 +286,13 @@
             this.sidePanel.AutoScroll = true;
             this.sidePanel.BackColor = System.Drawing.Color.DimGray;
             this.sidePanel.Controls.Add(this.btnHome);
-            this.sidePanel.Controls.Add(this.btnReviews);
             this.sidePanel.Controls.Add(this.btnManageProducts);
-            this.sidePanel.Controls.Add(this.btnMyOrders);
             this.sidePanel.Controls.Add(this.btnManageCustomers);
+            this.sidePanel.Controls.Add(this.btnBrowseProducts);
+            this.sidePanel.Controls.Add(this.btnMyOrders);
             this.sidePanel.Controls.Add(this.btnCart);
             this.sidePanel.Controls.Add(this.btnManageOrders);
-            this.sidePanel.Controls.Add(this.btnBrowseProducts);
+            this.sidePanel.Controls.Add(this.btnReviews);
             this.sidePanel.Controls.Add(this.btnReports);
             this.sidePanel.Controls.Add(this.btnDashboard);
             this.sidePanel.Controls.Add(this.btnProfile);
