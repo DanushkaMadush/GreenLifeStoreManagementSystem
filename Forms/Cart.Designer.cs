@@ -218,6 +218,7 @@
             this.buttonPlaceOrder.TabIndex = 4;
             this.buttonPlaceOrder.Text = "Place Order";
             this.buttonPlaceOrder.UseVisualStyleBackColor = false;
+            this.buttonPlaceOrder.Click += new System.EventHandler(this.buttonPlaceOrder_Click);
             // 
             // buttonContinueShopping
             // 

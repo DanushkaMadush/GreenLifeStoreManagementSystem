@@ -14,10 +14,12 @@ namespace GreenLifeStoreManagementSystem.Forms
     public partial class Cart : Form
     {
         private CartModel cart;
+        private User currentUser;
 
-        public Cart()
+        public Cart(User user)
         {
             InitializeComponent();
+            currentUser = user;
             cart = CartManager.GetCart();
             SetupGrid();
             LoadCart();
@@ -140,6 +142,59 @@ namespace GreenLifeStoreManagementSystem.Forms
         private void buttonContinueShopping_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonPlaceOrder_Click(object sender, EventArgs e)
+        {
+            if (cart.Items.Count == 0)
+            {
+                MessageBox.Show("Your cart is empty. Please add items before placing an order.",
+                               "Empty Cart", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                Order order = new Order();
+                order.CustomerId = currentUser.UserId;
+
+                foreach (var cartItem in cart.Items)
+                {
+                    OrderItem orderItem = new OrderItem
+                    {
+                        ProductId = cartItem.Product.ProductId,
+                        ProductName = cartItem.Product.ProductName,
+                        Price = cartItem.Product.Price,
+                        Quantity = cartItem.Quantity,
+                        SubTotal = cartItem.SubTotal
+                    };
+                    order.Items.Add(orderItem);
+                }
+
+                order.TotalAmount = cart.GetTotal();
+
+                bool success = order.PlaceOrder();
+
+                if (success)
+                {
+                    MessageBox.Show("Order placed successfully!", "Success",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    cart.Clear();
+                    LoadCart();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to place order. Please try again.", "Error",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while placing the order: {ex.Message}",
+                               "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
