@@ -1,4 +1,5 @@
 ﻿using GreenLifeStoreManagementSystem.Forms;
+using GreenLifeStoreManagementSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,35 @@ namespace GreenLifeStoreManagementSystem
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private User currentUser;
+
+        public MainForm(User user)
         {
             InitializeComponent();
-            LoadForm(new Home());
+            currentUser = user;
+            ConfigureUIByRole();
+            LoadForm(new Home(currentUser));
         }
+
+        private void ConfigureUIByRole()
+        {
+            if (currentUser.Role == "Admin")
+            {
+                btnBrowseProducts.Visible = false;
+                btnCart.Visible = false;
+                btnMyOrders.Visible = false;
+                btnReviews.Visible = false;
+            }
+            else if (currentUser.Role == "Customer")
+            {
+                btnManageProducts.Visible = false;
+                btnManageCustomers.Visible = false;
+                btnManageOrders.Visible = false;
+                btnReports.Visible = false;
+                btnDashboard.Visible = false;
+            }
+        }
+
         private void LoadForm(Form form)
         {
             panelMain.Controls.Clear();
@@ -30,12 +55,12 @@ namespace GreenLifeStoreManagementSystem
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            LoadForm(new Home());
+            LoadForm(new Home(currentUser));
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            LoadForm(new Profile());
+            LoadForm(new Profile(currentUser));
         }
 
         private void btnReviews_Click(object sender, EventArgs e)
@@ -85,14 +110,14 @@ namespace GreenLifeStoreManagementSystem
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
             LoginForm loginForm = new LoginForm();
-            loginForm.ShowDialog();
+            loginForm.Show();
             this.Close();
         }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
-            LoadForm(new Home());
+            LoadForm(new Home(currentUser));
         }
     }
 }

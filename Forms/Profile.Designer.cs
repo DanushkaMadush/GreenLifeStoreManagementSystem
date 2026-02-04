@@ -56,44 +56,36 @@
             this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
-
             this.panelMainContainer.SuspendLayout();
             this.panelForm.SuspendLayout();
             this.SuspendLayout();
-
             // 
             // panelMainContainer
             // 
             this.panelMainContainer.BackColor = System.Drawing.Color.White;
-            this.panelMainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainContainer.Controls.Add(this.labelTitle);
             this.panelMainContainer.Controls.Add(this.panelForm);
+            this.panelMainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainContainer.Location = new System.Drawing.Point(0, 0);
             this.panelMainContainer.Name = "panelMainContainer";
             this.panelMainContainer.Size = new System.Drawing.Size(600, 500);
             this.panelMainContainer.TabIndex = 0;
-
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(34, 139, 34);
+            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
             this.labelTitle.Location = new System.Drawing.Point(30, 20);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(130, 32);
+            this.labelTitle.Size = new System.Drawing.Size(133, 32);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "My Profile";
-
             // 
             // panelForm
             // 
-            this.panelForm.BackColor = System.Drawing.Color.FromArgb(245, 250, 245);
-            this.panelForm.Location = new System.Drawing.Point(30, 70);
-            this.panelForm.Size = new System.Drawing.Size(540, 400);
             this.panelForm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panelForm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.panelForm.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
+            this.panelForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
             this.panelForm.Controls.Add(this.labelFullName);
             this.panelForm.Controls.Add(this.textBoxFullName);
             this.panelForm.Controls.Add(this.labelUsername);
@@ -110,7 +102,11 @@
             this.panelForm.Controls.Add(this.textBoxConfirmPassword);
             this.panelForm.Controls.Add(this.buttonUpdate);
             this.panelForm.Controls.Add(this.buttonClear);
-
+            this.panelForm.Location = new System.Drawing.Point(30, 70);
+            this.panelForm.Name = "panelForm";
+            this.panelForm.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
+            this.panelForm.Size = new System.Drawing.Size(540, 400);
+            this.panelForm.TabIndex = 1;
             // 
             // labelFullName
             // 
@@ -118,10 +114,9 @@
             this.labelFullName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelFullName.Location = new System.Drawing.Point(30, 20);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(72, 19);
+            this.labelFullName.Size = new System.Drawing.Size(73, 19);
             this.labelFullName.TabIndex = 0;
             this.labelFullName.Text = "Full Name:";
-
             // 
             // textBoxFullName
             // 
@@ -130,7 +125,6 @@
             this.textBoxFullName.Name = "textBoxFullName";
             this.textBoxFullName.Size = new System.Drawing.Size(300, 25);
             this.textBoxFullName.TabIndex = 1;
-
             // 
             // labelUsername
             // 
@@ -138,20 +132,18 @@
             this.labelUsername.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelUsername.Location = new System.Drawing.Point(30, 55);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(71, 19);
+            this.labelUsername.Size = new System.Drawing.Size(74, 19);
             this.labelUsername.TabIndex = 2;
             this.labelUsername.Text = "Username:";
-
             // 
             // textBoxUsername
             // 
             this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.textBoxUsername.Location = new System.Drawing.Point(180, 52);
             this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.ReadOnly = true;
             this.textBoxUsername.Size = new System.Drawing.Size(300, 25);
             this.textBoxUsername.TabIndex = 3;
-            this.textBoxUsername.ReadOnly = true;
-
             // 
             // labelEmail
             // 
@@ -159,10 +151,9 @@
             this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelEmail.Location = new System.Drawing.Point(30, 90);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(45, 19);
+            this.labelEmail.Size = new System.Drawing.Size(44, 19);
             this.labelEmail.TabIndex = 4;
             this.labelEmail.Text = "Email:";
-
             // 
             // textBoxEmail
             // 
@@ -171,7 +162,6 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(300, 25);
             this.textBoxEmail.TabIndex = 5;
-
             // 
             // labelPhone
             // 
@@ -179,10 +169,9 @@
             this.labelPhone.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelPhone.Location = new System.Drawing.Point(30, 125);
             this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(98, 19);
+            this.labelPhone.Size = new System.Drawing.Size(105, 19);
             this.labelPhone.TabIndex = 6;
             this.labelPhone.Text = "Phone Number:";
-
             // 
             // textBoxPhone
             // 
@@ -191,7 +180,6 @@
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(300, 25);
             this.textBoxPhone.TabIndex = 7;
-
             // 
             // labelAddress
             // 
@@ -199,10 +187,9 @@
             this.labelAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelAddress.Location = new System.Drawing.Point(30, 160);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(59, 19);
+            this.labelAddress.Size = new System.Drawing.Size(61, 19);
             this.labelAddress.TabIndex = 8;
             this.labelAddress.Text = "Address:";
-
             // 
             // textBoxAddress
             // 
@@ -211,7 +198,6 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(300, 25);
             this.textBoxAddress.TabIndex = 9;
-
             // 
             // labelPassword
             // 
@@ -219,10 +205,9 @@
             this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelPassword.Location = new System.Drawing.Point(30, 195);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(67, 19);
+            this.labelPassword.Size = new System.Drawing.Size(70, 19);
             this.labelPassword.TabIndex = 10;
             this.labelPassword.Text = "Password:";
-
             // 
             // textBoxPassword
             // 
@@ -232,7 +217,6 @@
             this.textBoxPassword.Size = new System.Drawing.Size(300, 25);
             this.textBoxPassword.TabIndex = 11;
             this.textBoxPassword.UseSystemPasswordChar = true;
-
             // 
             // labelConfirmPassword
             // 
@@ -240,10 +224,9 @@
             this.labelConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelConfirmPassword.Location = new System.Drawing.Point(30, 230);
             this.labelConfirmPassword.Name = "labelConfirmPassword";
-            this.labelConfirmPassword.Size = new System.Drawing.Size(120, 19);
+            this.labelConfirmPassword.Size = new System.Drawing.Size(123, 19);
             this.labelConfirmPassword.TabIndex = 12;
             this.labelConfirmPassword.Text = "Confirm Password:";
-
             // 
             // textBoxConfirmPassword
             // 
@@ -253,13 +236,12 @@
             this.textBoxConfirmPassword.Size = new System.Drawing.Size(300, 25);
             this.textBoxConfirmPassword.TabIndex = 13;
             this.textBoxConfirmPassword.UseSystemPasswordChar = true;
-
             // 
             // buttonUpdate
             // 
+            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(34, 139, 34);
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
             this.buttonUpdate.Location = new System.Drawing.Point(180, 270);
             this.buttonUpdate.Name = "buttonUpdate";
@@ -267,13 +249,13 @@
             this.buttonUpdate.TabIndex = 14;
             this.buttonUpdate.Text = "Update Profile";
             this.buttonUpdate.UseVisualStyleBackColor = false;
-
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click_1);
             // 
             // buttonClear
             // 
+            this.buttonClear.BackColor = System.Drawing.Color.LightGray;
             this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClear.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonClear.BackColor = System.Drawing.Color.LightGray;
             this.buttonClear.ForeColor = System.Drawing.Color.Black;
             this.buttonClear.Location = new System.Drawing.Point(340, 270);
             this.buttonClear.Name = "buttonClear";
@@ -281,7 +263,6 @@
             this.buttonClear.TabIndex = 15;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
-
             // 
             // Profile
             // 
@@ -298,6 +279,7 @@
             this.panelForm.ResumeLayout(false);
             this.panelForm.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion

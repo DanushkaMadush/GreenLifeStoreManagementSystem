@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GreenLifeStoreManagementSystem.Models;
+using System;
 using System.Windows.Forms;
 
 namespace GreenLifeStoreManagementSystem
@@ -33,9 +27,29 @@ namespace GreenLifeStoreManagementSystem
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
-            this.Hide();
+            string username = textBoxUsername.Text.Trim();
+            string password = textBoxPassword.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter both username and password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var user = User.Login(username, password);
+
+            if (user != null)
+            {
+                MainForm mainForm = new MainForm(user);
+                mainForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxPassword.Clear();
+                textBoxUsername.Focus();
+            }
         }
     }
 }

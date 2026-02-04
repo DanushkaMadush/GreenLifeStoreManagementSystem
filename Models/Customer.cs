@@ -19,9 +19,14 @@ namespace GreenLifeStoreManagementSystem.Models
             }
 
             // Parameterized constructor
-            public Customer(int id, string username, string password, string fullName, string email)
-                : base(id, username, password, fullName, email, "Customer")
+            public Customer(string fullName, string username, string password, string email, string phone, string role)
             {
+                FullName = fullName;
+                Username = username;
+                Password = password;
+                Email = email;
+                Phone = phone;
+                Role = role;
             }
 
             // Additional methods

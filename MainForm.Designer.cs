@@ -55,7 +55,7 @@
             this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(3, 423);
+            this.btnDashboard.Location = new System.Drawing.Point(3, 381);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(200, 36);
             this.btnDashboard.TabIndex = 11;
@@ -94,7 +94,7 @@
             this.btnReports.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReports.ForeColor = System.Drawing.Color.White;
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(3, 381);
+            this.btnReports.Location = new System.Drawing.Point(3, 339);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(200, 36);
             this.btnReports.TabIndex = 10;
@@ -113,7 +113,7 @@
             this.btnBrowseProducts.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrowseProducts.ForeColor = System.Drawing.Color.White;
             this.btnBrowseProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBrowseProducts.Location = new System.Drawing.Point(3, 339);
+            this.btnBrowseProducts.Location = new System.Drawing.Point(3, 297);
             this.btnBrowseProducts.Name = "btnBrowseProducts";
             this.btnBrowseProducts.Size = new System.Drawing.Size(200, 36);
             this.btnBrowseProducts.TabIndex = 1;
@@ -132,7 +132,7 @@
             this.btnManageOrders.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageOrders.ForeColor = System.Drawing.Color.White;
             this.btnManageOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageOrders.Location = new System.Drawing.Point(3, 297);
+            this.btnManageOrders.Location = new System.Drawing.Point(3, 255);
             this.btnManageOrders.Name = "btnManageOrders";
             this.btnManageOrders.Size = new System.Drawing.Size(200, 36);
             this.btnManageOrders.TabIndex = 9;
@@ -151,7 +151,7 @@
             this.btnCart.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCart.ForeColor = System.Drawing.Color.White;
             this.btnCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCart.Location = new System.Drawing.Point(3, 255);
+            this.btnCart.Location = new System.Drawing.Point(3, 213);
             this.btnCart.Name = "btnCart";
             this.btnCart.Size = new System.Drawing.Size(200, 36);
             this.btnCart.TabIndex = 2;
@@ -170,7 +170,7 @@
             this.btnManageCustomers.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageCustomers.ForeColor = System.Drawing.Color.White;
             this.btnManageCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageCustomers.Location = new System.Drawing.Point(3, 213);
+            this.btnManageCustomers.Location = new System.Drawing.Point(3, 171);
             this.btnManageCustomers.Name = "btnManageCustomers";
             this.btnManageCustomers.Size = new System.Drawing.Size(200, 36);
             this.btnManageCustomers.TabIndex = 8;
@@ -189,7 +189,7 @@
             this.btnMyOrders.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyOrders.ForeColor = System.Drawing.Color.White;
             this.btnMyOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyOrders.Location = new System.Drawing.Point(3, 171);
+            this.btnMyOrders.Location = new System.Drawing.Point(3, 129);
             this.btnMyOrders.Name = "btnMyOrders";
             this.btnMyOrders.Size = new System.Drawing.Size(200, 36);
             this.btnMyOrders.TabIndex = 3;
@@ -208,7 +208,7 @@
             this.btnManageProducts.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageProducts.ForeColor = System.Drawing.Color.White;
             this.btnManageProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageProducts.Location = new System.Drawing.Point(3, 129);
+            this.btnManageProducts.Location = new System.Drawing.Point(3, 87);
             this.btnManageProducts.Name = "btnManageProducts";
             this.btnManageProducts.Size = new System.Drawing.Size(200, 36);
             this.btnManageProducts.TabIndex = 7;
@@ -227,7 +227,7 @@
             this.btnReviews.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReviews.ForeColor = System.Drawing.Color.White;
             this.btnReviews.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReviews.Location = new System.Drawing.Point(3, 87);
+            this.btnReviews.Location = new System.Drawing.Point(3, 45);
             this.btnReviews.Name = "btnReviews";
             this.btnReviews.Size = new System.Drawing.Size(200, 36);
             this.btnReviews.TabIndex = 4;
@@ -265,7 +265,7 @@
             this.btnProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
             this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfile.Location = new System.Drawing.Point(3, 45);
+            this.btnProfile.Location = new System.Drawing.Point(3, 423);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(200, 36);
             this.btnProfile.TabIndex = 5;
@@ -286,7 +286,6 @@
             this.sidePanel.AutoScroll = true;
             this.sidePanel.BackColor = System.Drawing.Color.DimGray;
             this.sidePanel.Controls.Add(this.btnHome);
-            this.sidePanel.Controls.Add(this.btnProfile);
             this.sidePanel.Controls.Add(this.btnReviews);
             this.sidePanel.Controls.Add(this.btnManageProducts);
             this.sidePanel.Controls.Add(this.btnMyOrders);
@@ -296,6 +295,7 @@
             this.sidePanel.Controls.Add(this.btnBrowseProducts);
             this.sidePanel.Controls.Add(this.btnReports);
             this.sidePanel.Controls.Add(this.btnDashboard);
+            this.sidePanel.Controls.Add(this.btnProfile);
             this.sidePanel.Controls.Add(this.btnLogout);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
