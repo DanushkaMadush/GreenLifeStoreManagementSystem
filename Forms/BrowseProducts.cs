@@ -1,12 +1,8 @@
 ﻿using GreenLifeStoreManagementSystem.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GreenLifeStoreManagementSystem.Forms
@@ -324,6 +320,10 @@ namespace GreenLifeStoreManagementSystem.Forms
                 return;
             }
 
+            // Updating the usage of CartManager to reference the newly added static class
+            CartModel cart = CartManager.GetCart();
+            cart.AddItem(selectedProduct, quantity);
+
             decimal unitPrice = selectedProduct.Price;
             decimal totalPrice = unitPrice * quantity;
             decimal discountAmount = (selectedProduct.Discount / 100) * totalPrice;
@@ -335,7 +335,8 @@ namespace GreenLifeStoreManagementSystem.Forms
                            $"Total: ${totalPrice:F2}\n" +
                            $"Discount ({selectedProduct.Discount}%): -${discountAmount:F2}\n" +
                            $"Final Price: ${finalPrice:F2}\n\n" +
-                           $"Added to cart successfully!";
+                           $"Added to cart successfully!\n" +
+                           $"Cart Total: ${cart.GetTotal():F2}";
 
             MessageBox.Show(message, "Added to Cart",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);

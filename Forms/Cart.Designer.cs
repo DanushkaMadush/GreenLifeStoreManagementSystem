@@ -156,6 +156,7 @@
             this.buttonUpdateQuantity.TabIndex = 2;
             this.buttonUpdateQuantity.Text = "Update Quantity";
             this.buttonUpdateQuantity.UseVisualStyleBackColor = false;
+            this.buttonUpdateQuantity.Click += new System.EventHandler(this.buttonUpdateQuantity_Click);
             // 
             // buttonRemoveItem
             // 
@@ -169,6 +170,7 @@
             this.buttonRemoveItem.TabIndex = 3;
             this.buttonRemoveItem.Text = "Remove Item";
             this.buttonRemoveItem.UseVisualStyleBackColor = false;
+            this.buttonRemoveItem.Click += new System.EventHandler(this.buttonRemoveItem_Click);
             // 
             // panelSummary
             // 
@@ -229,6 +231,7 @@
             this.buttonContinueShopping.TabIndex = 5;
             this.buttonContinueShopping.Text = "Continue Shopping";
             this.buttonContinueShopping.UseVisualStyleBackColor = false;
+            this.buttonContinueShopping.Click += new System.EventHandler(this.buttonContinueShopping_Click);
             // 
             // Cart
             // 
