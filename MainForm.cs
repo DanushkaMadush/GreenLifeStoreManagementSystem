@@ -65,7 +65,7 @@ namespace GreenLifeStoreManagementSystem
 
         private void btnReviews_Click(object sender, EventArgs e)
         {
-            LoadForm(new ReviewAndRatings());
+            LoadForm(new ReviewAndRatings(currentUser));
         }
 
         private void btnManageProducts_Click(object sender, EventArgs e)

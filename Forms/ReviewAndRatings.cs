@@ -13,11 +13,13 @@ namespace GreenLifeStoreManagementSystem.Forms
 {
     public partial class ReviewAndRatings : Form
     {
-        public ReviewAndRatings()
+        private User currentUser;
+        public ReviewAndRatings(User user)
         {
             InitializeComponent();
             LoadProducts();
             SetupGrid();
+            currentUser = user;
         }
 
         private void SetupGrid()
@@ -82,8 +84,7 @@ namespace GreenLifeStoreManagementSystem.Forms
 
             int productId = Convert.ToInt32(comboBoxProduct.SelectedValue);
 
-            // TEMP: hardcoded customer (replace later with logged user)
-            int customerId = 1;
+            int customerId = currentUser.UserId;
 
             if (Review.HasCustomerReviewed(productId, customerId))
             {
