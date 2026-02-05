@@ -75,7 +75,7 @@ namespace GreenLifeStoreManagementSystem
 
         private void btnMyOrders_Click(object sender, EventArgs e)
         {
-            LoadForm(new MyOrders());
+            LoadForm(new MyOrders(currentUser));
         }
 
         private void btnManageCustomers_Click(object sender, EventArgs e)
