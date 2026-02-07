@@ -41,8 +41,9 @@ namespace GreenLifeStoreManagementSystem
             if (user != null)
             {
                 MainForm mainForm = new MainForm(user);
-                mainForm.Show();
+                mainForm.FormClosed += (s, args) => Application.Exit();
                 this.Hide();
+                mainForm.Show();
             }
             else
             {

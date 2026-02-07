@@ -108,16 +108,14 @@ namespace GreenLifeStoreManagementSystem
             LoadForm(new Dashboard());
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Close();
-        }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
             LoadForm(new Home(currentUser));
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
