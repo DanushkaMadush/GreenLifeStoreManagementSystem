@@ -48,39 +48,35 @@
             this.labelAddress = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
-
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
             this.panelMainContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
             this.panelDetails.SuspendLayout();
             this.SuspendLayout();
-
             // 
             // panelMainContainer
             // 
             this.panelMainContainer.BackColor = System.Drawing.Color.White;
-            this.panelMainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainContainer.Controls.Add(this.labelTitle);
             this.panelMainContainer.Controls.Add(this.textBoxSearch);
             this.panelMainContainer.Controls.Add(this.buttonSearch);
             this.panelMainContainer.Controls.Add(this.dataGridViewCustomers);
             this.panelMainContainer.Controls.Add(this.panelDetails);
+            this.panelMainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainContainer.Location = new System.Drawing.Point(0, 0);
             this.panelMainContainer.Name = "panelMainContainer";
             this.panelMainContainer.Size = new System.Drawing.Size(800, 450);
             this.panelMainContainer.TabIndex = 0;
-
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(34, 139, 34);
+            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
             this.labelTitle.Location = new System.Drawing.Point(30, 20);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(230, 32);
+            this.labelTitle.Size = new System.Drawing.Size(234, 32);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Manage Customers";
-
             // 
             // textBoxSearch
             // 
@@ -90,13 +86,12 @@
             this.textBoxSearch.Size = new System.Drawing.Size(200, 25);
             this.textBoxSearch.TabIndex = 1;
             this.textBoxSearch.Text = "Search by name or username";
-
             // 
             // buttonSearch
             // 
+            this.buttonSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonSearch.BackColor = System.Drawing.Color.FromArgb(34, 139, 34);
             this.buttonSearch.ForeColor = System.Drawing.Color.White;
             this.buttonSearch.Location = new System.Drawing.Point(510, 25);
             this.buttonSearch.Name = "buttonSearch";
@@ -104,7 +99,6 @@
             this.buttonSearch.TabIndex = 2;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = false;
-
             // 
             // dataGridViewCustomers
             // 
@@ -122,18 +116,11 @@
             this.dataGridViewCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCustomers.Size = new System.Drawing.Size(500, 350);
             this.dataGridViewCustomers.TabIndex = 3;
-            // Columns (add in code-behind for clarity)
-            // CustomerID, FullName, Username, Email, Phone, Address
-
             // 
             // panelDetails
             // 
-            this.panelDetails.BackColor = System.Drawing.Color.FromArgb(245, 250, 245);
-            this.panelDetails.Location = new System.Drawing.Point(550, 70);
-            this.panelDetails.Size = new System.Drawing.Size(220, 350);
             this.panelDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.panelDetails.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.panelDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(245)))));
             this.panelDetails.Controls.Add(this.labelFullName);
             this.panelDetails.Controls.Add(this.textBoxFullName);
             this.panelDetails.Controls.Add(this.labelEmail);
@@ -143,7 +130,11 @@
             this.panelDetails.Controls.Add(this.labelAddress);
             this.panelDetails.Controls.Add(this.textBoxAddress);
             this.panelDetails.Controls.Add(this.buttonUpdate);
-
+            this.panelDetails.Location = new System.Drawing.Point(550, 70);
+            this.panelDetails.Name = "panelDetails";
+            this.panelDetails.Padding = new System.Windows.Forms.Padding(15);
+            this.panelDetails.Size = new System.Drawing.Size(220, 350);
+            this.panelDetails.TabIndex = 4;
             // 
             // labelFullName
             // 
@@ -151,10 +142,9 @@
             this.labelFullName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelFullName.Location = new System.Drawing.Point(15, 20);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(72, 19);
+            this.labelFullName.Size = new System.Drawing.Size(73, 19);
             this.labelFullName.TabIndex = 0;
             this.labelFullName.Text = "Full Name:";
-
             // 
             // textBoxFullName
             // 
@@ -163,7 +153,6 @@
             this.textBoxFullName.Name = "textBoxFullName";
             this.textBoxFullName.Size = new System.Drawing.Size(190, 25);
             this.textBoxFullName.TabIndex = 1;
-
             // 
             // labelEmail
             // 
@@ -171,10 +160,9 @@
             this.labelEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelEmail.Location = new System.Drawing.Point(15, 75);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(45, 19);
+            this.labelEmail.Size = new System.Drawing.Size(44, 19);
             this.labelEmail.TabIndex = 2;
             this.labelEmail.Text = "Email:";
-
             // 
             // textBoxEmail
             // 
@@ -183,7 +171,6 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(190, 25);
             this.textBoxEmail.TabIndex = 3;
-
             // 
             // labelPhone
             // 
@@ -191,10 +178,9 @@
             this.labelPhone.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelPhone.Location = new System.Drawing.Point(15, 130);
             this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(98, 19);
+            this.labelPhone.Size = new System.Drawing.Size(105, 19);
             this.labelPhone.TabIndex = 4;
             this.labelPhone.Text = "Phone Number:";
-
             // 
             // textBoxPhone
             // 
@@ -203,7 +189,6 @@
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(190, 25);
             this.textBoxPhone.TabIndex = 5;
-
             // 
             // labelAddress
             // 
@@ -211,10 +196,9 @@
             this.labelAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelAddress.Location = new System.Drawing.Point(15, 185);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(59, 19);
+            this.labelAddress.Size = new System.Drawing.Size(61, 19);
             this.labelAddress.TabIndex = 6;
             this.labelAddress.Text = "Address:";
-
             // 
             // textBoxAddress
             // 
@@ -223,13 +207,12 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(190, 25);
             this.textBoxAddress.TabIndex = 7;
-
             // 
             // buttonUpdate
             // 
+            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
             this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(34, 139, 34);
             this.buttonUpdate.ForeColor = System.Drawing.Color.White;
             this.buttonUpdate.Location = new System.Drawing.Point(15, 250);
             this.buttonUpdate.Name = "buttonUpdate";
@@ -237,7 +220,7 @@
             this.buttonUpdate.TabIndex = 8;
             this.buttonUpdate.Text = "Update Customer";
             this.buttonUpdate.UseVisualStyleBackColor = false;
-
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // ManageCustomers
             // 
@@ -249,12 +232,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageCustomers";
             this.Text = "ManageCustomers";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).EndInit();
             this.panelMainContainer.ResumeLayout(false);
             this.panelMainContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).EndInit();
             this.panelDetails.ResumeLayout(false);
             this.panelDetails.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion
