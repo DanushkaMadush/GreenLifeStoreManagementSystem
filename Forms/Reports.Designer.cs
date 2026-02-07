@@ -37,11 +37,6 @@
             this.labelFromDate = new System.Windows.Forms.Label();
             this.dateTimePickerFromDate = new System.Windows.Forms.DateTimePicker();
             this.labelToDate = new System.Windows.Forms.Label();
-            // Update this section in the Designer.cs file:
-            this.comboBoxReportType.Items.AddRange(new object[] {
-                "Sales Report",
-                "Stock Report",
-                "Customer Order History"});
             this.dateTimePickerToDate = new System.Windows.Forms.DateTimePicker();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.buttonExport = new System.Windows.Forms.Button();
@@ -138,6 +133,9 @@
             this.comboBoxReportType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.comboBoxReportType.FormattingEnabled = true;
             this.comboBoxReportType.Items.AddRange(new object[] {
+            "Sales Report",
+            "Stock Report",
+            "Customer Order History",
             "Sales Report",
             "Order Status Report",
             "Product Performance Report",
