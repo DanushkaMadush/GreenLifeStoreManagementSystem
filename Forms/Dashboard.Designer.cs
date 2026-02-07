@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.labelDashboardTitle = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
+            this.labelDashboardTitle = new System.Windows.Forms.Label();
             this.panelStats = new System.Windows.Forms.Panel();
             this.tableLayoutPanelStats = new System.Windows.Forms.TableLayoutPanel();
             this.panelProducts = new System.Windows.Forms.Panel();
@@ -51,19 +55,9 @@
             this.labelLowStockTitle = new System.Windows.Forms.Label();
             this.panelDetails = new System.Windows.Forms.Panel();
             this.tableLayoutPanelDetails = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBoxOrderStatus = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanelOrderStatus = new System.Windows.Forms.TableLayoutPanel();
-            this.panelPending = new System.Windows.Forms.Panel();
-            this.labelPendingCount = new System.Windows.Forms.Label();
-            this.labelPending = new System.Windows.Forms.Label();
-            this.panelShipped = new System.Windows.Forms.Panel();
-            this.labelShippedCount = new System.Windows.Forms.Label();
-            this.labelShipped = new System.Windows.Forms.Label();
-            this.panelDelivered = new System.Windows.Forms.Panel();
-            this.labelDeliveredCount = new System.Windows.Forms.Label();
-            this.labelDelivered = new System.Windows.Forms.Label();
             this.groupBoxCategories = new System.Windows.Forms.GroupBox();
             this.dataGridViewCategories = new System.Windows.Forms.DataGridView();
+            this.chartOrderStatus = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanelMain.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.panelStats.SuspendLayout();
@@ -75,13 +69,9 @@
             this.panelLowStock.SuspendLayout();
             this.panelDetails.SuspendLayout();
             this.tableLayoutPanelDetails.SuspendLayout();
-            this.groupBoxOrderStatus.SuspendLayout();
-            this.tableLayoutPanelOrderStatus.SuspendLayout();
-            this.panelPending.SuspendLayout();
-            this.panelShipped.SuspendLayout();
-            this.panelDelivered.SuspendLayout();
             this.groupBoxCategories.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartOrderStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanelMain
@@ -113,17 +103,6 @@
             this.panelHeader.Size = new System.Drawing.Size(1000, 60);
             this.panelHeader.TabIndex = 0;
             // 
-            // labelDashboardTitle
-            // 
-            this.labelDashboardTitle.AutoSize = true;
-            this.labelDashboardTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.labelDashboardTitle.ForeColor = System.Drawing.Color.White;
-            this.labelDashboardTitle.Location = new System.Drawing.Point(20, 15);
-            this.labelDashboardTitle.Name = "labelDashboardTitle";
-            this.labelDashboardTitle.Size = new System.Drawing.Size(335, 29);
-            this.labelDashboardTitle.TabIndex = 0;
-            this.labelDashboardTitle.Text = "Green Life Store Dashboard";
-            // 
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -136,6 +115,17 @@
             this.buttonRefresh.TabIndex = 1;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = false;
+            // 
+            // labelDashboardTitle
+            // 
+            this.labelDashboardTitle.AutoSize = true;
+            this.labelDashboardTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.labelDashboardTitle.ForeColor = System.Drawing.Color.White;
+            this.labelDashboardTitle.Location = new System.Drawing.Point(20, 15);
+            this.labelDashboardTitle.Name = "labelDashboardTitle";
+            this.labelDashboardTitle.Size = new System.Drawing.Size(339, 29);
+            this.labelDashboardTitle.TabIndex = 0;
+            this.labelDashboardTitle.Text = "Green Life Store Dashboard";
             // 
             // panelStats
             // 
@@ -363,7 +353,7 @@
             this.tableLayoutPanelDetails.ColumnCount = 2;
             this.tableLayoutPanelDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelDetails.Controls.Add(this.groupBoxOrderStatus, 0, 0);
+            this.tableLayoutPanelDetails.Controls.Add(this.chartOrderStatus, 0, 0);
             this.tableLayoutPanelDetails.Controls.Add(this.groupBoxCategories, 1, 0);
             this.tableLayoutPanelDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelDetails.Location = new System.Drawing.Point(0, 0);
@@ -372,141 +362,6 @@
             this.tableLayoutPanelDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelDetails.Size = new System.Drawing.Size(980, 360);
             this.tableLayoutPanelDetails.TabIndex = 0;
-            // 
-            // groupBoxOrderStatus
-            // 
-            this.groupBoxOrderStatus.Controls.Add(this.tableLayoutPanelOrderStatus);
-            this.groupBoxOrderStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxOrderStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBoxOrderStatus.Location = new System.Drawing.Point(10, 10);
-            this.groupBoxOrderStatus.Margin = new System.Windows.Forms.Padding(10);
-            this.groupBoxOrderStatus.Name = "groupBoxOrderStatus";
-            this.groupBoxOrderStatus.Size = new System.Drawing.Size(470, 340);
-            this.groupBoxOrderStatus.TabIndex = 0;
-            this.groupBoxOrderStatus.TabStop = false;
-            this.groupBoxOrderStatus.Text = "Order Status Overview";
-            // 
-            // tableLayoutPanelOrderStatus
-            // 
-            this.tableLayoutPanelOrderStatus.ColumnCount = 1;
-            this.tableLayoutPanelOrderStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelOrderStatus.Controls.Add(this.panelPending, 0, 0);
-            this.tableLayoutPanelOrderStatus.Controls.Add(this.panelShipped, 0, 1);
-            this.tableLayoutPanelOrderStatus.Controls.Add(this.panelDelivered, 0, 2);
-            this.tableLayoutPanelOrderStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelOrderStatus.Location = new System.Drawing.Point(3, 22);
-            this.tableLayoutPanelOrderStatus.Name = "tableLayoutPanelOrderStatus";
-            this.tableLayoutPanelOrderStatus.RowCount = 3;
-            this.tableLayoutPanelOrderStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelOrderStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelOrderStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelOrderStatus.Size = new System.Drawing.Size(464, 315);
-            this.tableLayoutPanelOrderStatus.TabIndex = 0;
-            // 
-            // panelPending
-            // 
-            this.panelPending.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.panelPending.Controls.Add(this.labelPendingCount);
-            this.panelPending.Controls.Add(this.labelPending);
-            this.panelPending.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPending.Location = new System.Drawing.Point(10, 10);
-            this.panelPending.Margin = new System.Windows.Forms.Padding(10);
-            this.panelPending.Name = "panelPending";
-            this.panelPending.Size = new System.Drawing.Size(444, 85);
-            this.panelPending.TabIndex = 0;
-            // 
-            // labelPendingCount
-            // 
-            this.labelPendingCount.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelPendingCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.labelPendingCount.ForeColor = System.Drawing.Color.White;
-            this.labelPendingCount.Location = new System.Drawing.Point(344, 0);
-            this.labelPendingCount.Name = "labelPendingCount";
-            this.labelPendingCount.Size = new System.Drawing.Size(100, 85);
-            this.labelPendingCount.TabIndex = 1;
-            this.labelPendingCount.Text = "0";
-            this.labelPendingCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelPending
-            // 
-            this.labelPending.AutoSize = true;
-            this.labelPending.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.labelPending.ForeColor = System.Drawing.Color.White;
-            this.labelPending.Location = new System.Drawing.Point(20, 30);
-            this.labelPending.Name = "labelPending";
-            this.labelPending.Size = new System.Drawing.Size(148, 24);
-            this.labelPending.TabIndex = 0;
-            this.labelPending.Text = "Pending Orders";
-            // 
-            // panelShipped
-            // 
-            this.panelShipped.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.panelShipped.Controls.Add(this.labelShippedCount);
-            this.panelShipped.Controls.Add(this.labelShipped);
-            this.panelShipped.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShipped.Location = new System.Drawing.Point(10, 115);
-            this.panelShipped.Margin = new System.Windows.Forms.Padding(10);
-            this.panelShipped.Name = "panelShipped";
-            this.panelShipped.Size = new System.Drawing.Size(444, 85);
-            this.panelShipped.TabIndex = 1;
-            // 
-            // labelShippedCount
-            // 
-            this.labelShippedCount.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelShippedCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.labelShippedCount.ForeColor = System.Drawing.Color.White;
-            this.labelShippedCount.Location = new System.Drawing.Point(344, 0);
-            this.labelShippedCount.Name = "labelShippedCount";
-            this.labelShippedCount.Size = new System.Drawing.Size(100, 85);
-            this.labelShippedCount.TabIndex = 1;
-            this.labelShippedCount.Text = "0";
-            this.labelShippedCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelShipped
-            // 
-            this.labelShipped.AutoSize = true;
-            this.labelShipped.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.labelShipped.ForeColor = System.Drawing.Color.White;
-            this.labelShipped.Location = new System.Drawing.Point(20, 30);
-            this.labelShipped.Name = "labelShipped";
-            this.labelShipped.Size = new System.Drawing.Size(147, 24);
-            this.labelShipped.TabIndex = 0;
-            this.labelShipped.Text = "Shipped Orders";
-            // 
-            // panelDelivered
-            // 
-            this.panelDelivered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.panelDelivered.Controls.Add(this.labelDeliveredCount);
-            this.panelDelivered.Controls.Add(this.labelDelivered);
-            this.panelDelivered.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDelivered.Location = new System.Drawing.Point(10, 220);
-            this.panelDelivered.Margin = new System.Windows.Forms.Padding(10);
-            this.panelDelivered.Name = "panelDelivered";
-            this.panelDelivered.Size = new System.Drawing.Size(444, 85);
-            this.panelDelivered.TabIndex = 2;
-            // 
-            // labelDeliveredCount
-            // 
-            this.labelDeliveredCount.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelDeliveredCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.labelDeliveredCount.ForeColor = System.Drawing.Color.White;
-            this.labelDeliveredCount.Location = new System.Drawing.Point(344, 0);
-            this.labelDeliveredCount.Name = "labelDeliveredCount";
-            this.labelDeliveredCount.Size = new System.Drawing.Size(100, 85);
-            this.labelDeliveredCount.TabIndex = 1;
-            this.labelDeliveredCount.Text = "0";
-            this.labelDeliveredCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelDelivered
-            // 
-            this.labelDelivered.AutoSize = true;
-            this.labelDelivered.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.labelDelivered.ForeColor = System.Drawing.Color.White;
-            this.labelDelivered.Location = new System.Drawing.Point(20, 30);
-            this.labelDelivered.Name = "labelDelivered";
-            this.labelDelivered.Size = new System.Drawing.Size(163, 24);
-            this.labelDelivered.TabIndex = 0;
-            this.labelDelivered.Text = "Delivered Orders";
             // 
             // groupBoxCategories
             // 
@@ -535,6 +390,29 @@
             this.dataGridViewCategories.Size = new System.Drawing.Size(464, 315);
             this.dataGridViewCategories.TabIndex = 0;
             // 
+            // chartOrderStatus
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartOrderStatus.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartOrderStatus.Legends.Add(legend1);
+            this.chartOrderStatus.Location = new System.Drawing.Point(3, 3);
+            this.chartOrderStatus.Name = "chartOrderStatus";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.IsValueShownAsLabel = true;
+            series1.LabelFormat = "#PERCENT{P0}";
+            series1.Legend = "Legend1";
+            series1.Name = "OrderStatus";
+            this.chartOrderStatus.Series.Add(series1);
+            this.chartOrderStatus.Size = new System.Drawing.Size(484, 347);
+            this.chartOrderStatus.TabIndex = 15;
+            this.chartOrderStatus.Text = "Order Status Distribution";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            title1.Name = "Title1";
+            title1.Text = "Order Status Distribution";
+            this.chartOrderStatus.Titles.Add(title1);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,16 +435,9 @@
             this.panelLowStock.ResumeLayout(false);
             this.panelDetails.ResumeLayout(false);
             this.tableLayoutPanelDetails.ResumeLayout(false);
-            this.groupBoxOrderStatus.ResumeLayout(false);
-            this.tableLayoutPanelOrderStatus.ResumeLayout(false);
-            this.panelPending.ResumeLayout(false);
-            this.panelPending.PerformLayout();
-            this.panelShipped.ResumeLayout(false);
-            this.panelShipped.PerformLayout();
-            this.panelDelivered.ResumeLayout(false);
-            this.panelDelivered.PerformLayout();
             this.groupBoxCategories.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategories)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartOrderStatus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -596,18 +467,8 @@
         private System.Windows.Forms.Label labelLowStockTitle;
         private System.Windows.Forms.Panel panelDetails;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelDetails;
-        private System.Windows.Forms.GroupBox groupBoxOrderStatus;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelOrderStatus;
-        private System.Windows.Forms.Panel panelPending;
-        private System.Windows.Forms.Label labelPendingCount;
-        private System.Windows.Forms.Label labelPending;
-        private System.Windows.Forms.Panel panelShipped;
-        private System.Windows.Forms.Label labelShippedCount;
-        private System.Windows.Forms.Label labelShipped;
-        private System.Windows.Forms.Panel panelDelivered;
-        private System.Windows.Forms.Label labelDeliveredCount;
-        private System.Windows.Forms.Label labelDelivered;
         private System.Windows.Forms.GroupBox groupBoxCategories;
         private System.Windows.Forms.DataGridView dataGridViewCategories;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartOrderStatus;
     }
 }

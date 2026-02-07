@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace GreenLifeStoreManagementSystem.Forms
 {
@@ -63,8 +64,8 @@ namespace GreenLifeStoreManagementSystem.Forms
             try
             {
                 LoadBasicStats();
-                LoadOrderStatusDetails();
                 LoadCategoryData();
+                LoadOrderStatusChart();
             }
             catch (Exception ex)
             {
@@ -101,21 +102,6 @@ namespace GreenLifeStoreManagementSystem.Forms
             }
         }
 
-        private void LoadOrderStatusDetails()
-        {
-            try
-            {
-                labelPendingCount.Text = dashboardRepository.GetTotalPendingOrders().ToString();
-                labelShippedCount.Text = dashboardRepository.GetTotalShippedOrders().ToString();
-                labelDeliveredCount.Text = dashboardRepository.GetTotalDeliveredOrders().ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading order status details: {ex.Message}", "Error",
-                               MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void LoadCategoryData()
         {
             try
@@ -143,5 +129,53 @@ namespace GreenLifeStoreManagementSystem.Forms
             MessageBox.Show("Dashboard data refreshed successfully!", "Refresh Complete",
                            MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void LoadOrderStatusChart()
+        {
+            try
+            {
+                int pendingCount = dashboardRepository.GetTotalPendingOrders();
+                int shippedCount = dashboardRepository.GetTotalShippedOrders();
+                int deliveredCount = dashboardRepository.GetTotalDeliveredOrders();
+                chartOrderStatus.Series["OrderStatus"].Points.Clear();
+
+                if (pendingCount > 0 || shippedCount > 0 || deliveredCount > 0)
+                {
+                    if (pendingCount > 0)
+                    {
+                        var pendingPoint = chartOrderStatus.Series["OrderStatus"].Points.AddXY("Pending", pendingCount);
+                        chartOrderStatus.Series["OrderStatus"].Points[pendingPoint].Color = Color.FromArgb(255, 193, 7);
+                    }
+
+                    if (shippedCount > 0)
+                    {
+                        var shippedPoint = chartOrderStatus.Series["OrderStatus"].Points.AddXY("Shipped", shippedCount);
+                        chartOrderStatus.Series["OrderStatus"].Points[shippedPoint].Color = Color.FromArgb(0, 123, 255);
+                    }
+
+                    if (deliveredCount > 0)
+                    {
+                        var deliveredPoint = chartOrderStatus.Series["OrderStatus"].Points.AddXY("Delivered", deliveredCount);
+                        chartOrderStatus.Series["OrderStatus"].Points[deliveredPoint].Color = Color.FromArgb(40, 167, 69);
+                    }
+
+                    chartOrderStatus.ChartAreas[0].Area3DStyle.Enable3D = true;
+                    chartOrderStatus.ChartAreas[0].Area3DStyle.Inclination = 20;
+                }
+                else
+                {
+                    chartOrderStatus.Series["OrderStatus"].Points.AddXY("No Orders", 1);
+                    chartOrderStatus.Series["OrderStatus"].Points[0].Color = Color.LightGray;
+                }
+
+                chartOrderStatus.Invalidate();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading order status chart: {ex.Message}", "Error",
+                               MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
     }
 }
