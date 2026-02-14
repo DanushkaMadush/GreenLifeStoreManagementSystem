@@ -1,53 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GreenLifeStoreManagementSystem.Repositories;
 
 namespace GreenLifeStoreManagementSystem.Models
 {
-    using System;
-
-    namespace GreenLifeStoreManagementSystem.Models
+    public class User
     {
-        public abstract class User
+        public int UserId { get; set; }
+        public string FullName { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
+        public string Role { get; set; }
+
+        public User()
         {
-            // Auto-properties
-            public int Id { get; set; }
-            public string Username { get; set; }
-            public string Password { get; set; }
-            public string FullName { get; set; }
-            public string Email { get; set; }
-            public string Role { get; set; }
+        }
 
-            // Default constructor
-            protected User()
-            {
-            }
+        public User(string fullName, string username, string password,
+                    string email, string phone, string address, string role)
+        {
+            FullName = fullName;
+            Username = username;
+            Password = password;
+            Email = email;
+            Phone = phone;
+            Address = address;
+            Role = role;
+        }
 
-            // Parameterized constructor
-            protected User(int id, string username, string password, string fullName, string email, string role)
-            {
-                Id = id;
-                Username = username;
-                Password = password;
-                FullName = fullName;
-                Email = email;
-                Role = role;
-            }
+        public bool Register()
+        {
+            UserRepository repo = new UserRepository();
+            return repo.Register(this);
+        }
 
-            // Virtual methods
-            public virtual bool SignIn(string username, string password)
-            {
-                // Basic credential check
-                return Username == username && Password == password;
-            }
+        public static User Login(string username, string password)
+        {
+            UserRepository repo = new UserRepository();
+            return repo.Login(username, password);
+        }
 
-            public virtual void Register()
-            {
-                // Registration logic placeholder
-            }
+        public static bool IsUsernameTaken(string username)
+        {
+            UserRepository repo = new UserRepository();
+            return repo.UserNameExists(username);
+        }
+
+        public static User GetUserById(int userId)
+        {
+            UserRepository repo = new UserRepository();
+            return repo.GetUserById(userId);
+        }
+
+        public bool UpdateProfile()
+        {
+            UserRepository repo = new UserRepository();
+            return repo.UpdateUser(this);
         }
     }
-
 }
