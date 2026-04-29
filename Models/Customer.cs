@@ -13,6 +13,7 @@ namespace GreenLifeStoreManagementSystem.Models
         {
         }
 
+        // get all customers
         public static List<Customer> GetAllCustomers()
         {
             CustomerRepository repo = new CustomerRepository();

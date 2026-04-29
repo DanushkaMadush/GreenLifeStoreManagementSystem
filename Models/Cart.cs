@@ -7,11 +7,13 @@ namespace GreenLifeStoreManagementSystem.Models
     {
         public List<CartItem> Items { get; set; }
 
+        //create cart
         public CartModel()
         {
             Items = new List<CartItem>();
         }
 
+        //add items to the cart
         public void AddItem(Product product, int quantity)
         {
             CartItem existingItem =
@@ -33,6 +35,7 @@ namespace GreenLifeStoreManagementSystem.Models
             }
         }
 
+        //remove items from the cart
         public void RemoveItem(int productId)
         {
             CartItem item =
@@ -44,6 +47,7 @@ namespace GreenLifeStoreManagementSystem.Models
             }
         }
 
+        //update item qtys in the cart
         public void UpdateQuantity(int productId, int quantity)
         {
             CartItem item =
@@ -55,11 +59,13 @@ namespace GreenLifeStoreManagementSystem.Models
             }
         }
 
+        //get the total of cart items
         public decimal GetTotal()
         {
             return Items.Sum(i => i.SubTotal);
         }
 
+        //clear the cart
         public void Clear()
         {
             Items.Clear();

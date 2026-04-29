@@ -5,6 +5,7 @@
         public Product Product { get; set; }
         public int Quantity { get; set; }
 
+        //calculate the discount added total of items in the cart
         public decimal SubTotal
         {
             get
