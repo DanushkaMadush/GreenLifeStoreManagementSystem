@@ -9,7 +9,7 @@ namespace GreenLifeStoreManagementSystem.Data
 {
     public class DbConnection
     {
-        private static string connectionString = "Server=DANUSHKA\\SQLEXPRESS;Database=GreenLifeDB;Trusted_Connection=True;";
+        private static string connectionString = "Server=localhost;Database=GreenLifeDB;Trusted_Connection=True;";
 
         public static SqlConnection GetConnection()
         {
